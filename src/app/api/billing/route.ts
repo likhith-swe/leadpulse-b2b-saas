@@ -110,7 +110,7 @@ export async function POST(req: NextRequest) {
         mode: "live",
         provider: "razorpay",
         subscriptionId: "rzp_direct_pay",
-        checkoutUrl: "https://razorpay.me/@likhiths",
+        checkoutUrl: "https://razorpay.me/@NEXVRA",
       });
     }
 
@@ -120,7 +120,7 @@ export async function POST(req: NextRequest) {
         mode: "live",
         provider: "razorpay",
         subscriptionId: "rzp_direct_pay",
-        checkoutUrl: "https://razorpay.me/@likhiths",
+        checkoutUrl: "https://razorpay.me/@NEXVRA",
       });
     }
 
