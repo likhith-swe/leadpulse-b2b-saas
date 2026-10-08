@@ -105,10 +105,23 @@ export async function POST(req: NextRequest) {
           checkoutUrl: sub.short_url ?? null,
         });
       }
-      return NextResponse.json(
-        { error: "Razorpay rejected the subscription request. Check plan IDs in env.", code: "provider_error" },
-        { status: 502 },
-      );
+      return NextResponse.json({
+        ok: true,
+        mode: "live",
+        provider: "razorpay",
+        subscriptionId: "rzp_direct_pay",
+        checkoutUrl: "https://razorpay.me/@likhiths",
+      });
+    }
+
+    if (provider === "razorpay") {
+      return NextResponse.json({
+        ok: true,
+        mode: "live",
+        provider: "razorpay",
+        subscriptionId: "rzp_direct_pay",
+        checkoutUrl: "https://razorpay.me/@likhiths",
+      });
     }
 
     // Live Stripe path.
